@@ -1,10 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    max-width: 400px;
+    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
@@ -16,26 +18,59 @@ h1 {
     text-align: center;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
+.input-container {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="time"] {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+input[type="time"] {
+    width: 10%;
+}
+
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
+.add-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #ff0000;
+    color: #fff;
 }
 
 ul {
@@ -44,6 +79,9 @@ ul {
 }
 
 li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 5px;
@@ -52,4 +90,13 @@ li {
 
 li:hover {
     background-color: #f0f0f0;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.edit-delete-container {
+    display: flex;
+    align-items: center;
 }
